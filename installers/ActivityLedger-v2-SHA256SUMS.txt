@@ -1,0 +1,2 @@
+3e095487e270bf1ed9c48f7a46e5c41304bbaad245ecdc0c82a9cbaf1fb121b7  ActivityLedgerSetup-v2.0.0-Windows-x64.exe
+94c215454a16d107e6c494fb2c1746d0cbe6ad61a1aec6af7c0d1763c526cc9f  ActivityLedgerSetup-v2.0.0-Windows-arm64.exe
