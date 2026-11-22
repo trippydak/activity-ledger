@@ -4,7 +4,15 @@ A Windows activity journal for foreground applications and websites, with local 
 
 ## Downloads
 
-The **v2.0.0 release** contains standalone Windows installers:
+[Open the v2.0.0 release](https://github.com/trippydak/activity-ledger/releases/tag/v2.0.0).
+
+- **[Download Windows x64 installer](https://github.com/trippydak/activity-ledger/raw/refs/tags/v2.0.0-installers/installers/ActivityLedgerSetup-v2.0.0-Windows-x64.exe)** — most Intel/AMD PCs.
+- **[Download Windows ARM64 installer](https://github.com/trippydak/activity-ledger/raw/refs/tags/v2.0.0-installers/installers/ActivityLedgerSetup-v2.0.0-Windows-arm64.exe)** — Windows 11 on ARM.
+- [Installer checksums](https://github.com/trippydak/activity-ledger/blob/v2.0.0-installers/installers/ActivityLedger-v2-SHA256SUMS.txt).
+
+This is a private repository; sign in to GitHub with repository access to download. Binaries are kept on the versioned `v2.0.0-installers` tag, separate from the source branch.
+
+Installer filenames:
 
 - `ActivityLedgerSetup-v2.0.0-Windows-x64.exe` — Intel/AMD Windows 10/11.
 - `ActivityLedgerSetup-v2.0.0-Windows-arm64.exe` — Windows 11 on ARM.
