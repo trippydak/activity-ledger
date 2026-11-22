@@ -1,0 +1,131 @@
+ACTIVITY LEDGER V2 - INSTALL ON ANOTHER WINDOWS COMPUTER
+
+Choose the installer matching that computer:
+- ActivityLedgerSetup-v2.0.0-Windows-x64.exe: Intel/AMD Windows 10/11.
+- ActivityLedgerSetup-v2.0.0-Windows-arm64.exe: Windows 11 on ARM.
+
+Run the .exe directly. No separate .NET install or ZIP extraction is needed.
+Set a management password on that machine and follow its first-run guide.
+Use the same installer on each authorized compatible computer. Each installation
+gets separate local history and browser pairing. No user/cloud credentials or
+existing activity records are built into the installer.
+
+For remote viewing, create a NEW laptop entry in the private cloud dashboard
+for EACH Windows installation. Download its unique pairing file, import it in
+Cloud sync, enable optional sync, and save. Cloud sync starts OFF on fresh installs.
+Never reuse one computer's pairing file for another.
+
+To upgrade: Quit the old app from its tray menu, then run the v2 installer.
+History, password, settings and existing cloud/browser pairings are preserved.
+
+ACTIVITY LEDGER 2.0.0 - QUICK START
+
+1. Extract this ZIP and run the matching v2 setup .exe on Windows 10/11 x64.
+2. Setup asks you to create a management password, or enter the existing
+   one. The installed app opens and starts recording automatically,
+   including after future Windows sign-ins.
+3. For websites, open Browser setup with your management password and follow
+   the Chrome/Edge extension instructions. Copy the connection token into
+   the extension options, select Microsoft Edge for Edge (Google Chrome
+   for Chrome), and choose Save and test connection.
+4. Use Timeline / Applications / Websites, choose dates, and search history.
+5. Settings lets you enable titles/full website paths, exclude apps/sites,
+   and adjust idle/retention. Windows startup stays enabled in the app.
+
+UPDATING: Quit the old app from its tray icon first, using its password if
+one is already configured. Then run the new ActivityLedgerSetup.exe.
+Setup also verifies your password. History, settings, pairing, and your
+password are preserved. Remove old portable program copies to avoid
+accidentally launching an older version.
+
+UPDATE THE EXTENSION for 1.2.0 private-window flags:
+Open Browser setup > Extract and open extension folder, then open
+edge://extensions (or chrome://extensions) and Reload Activity Ledger
+if it already loads that same folder. Pairing settings remain when
+reloading the same folder. If it loads a different folder, copy the five
+new bundled files into that existing folder and Reload; alternatively
+remove the extension, load the new folder, and pair again.
+Normal websites still work with the older extension protocol, but private
+flags require the updated desktop and extension.
+
+ENABLE PRIVATE FLAGS (explicit browser permission):
+After updating and reloading the companion, open its Details page at
+edge://extensions and enable Allow in InPrivate. In Chrome, use
+chrome://extensions > Details > Allow in Incognito. You must enable this
+yourself for each profile; setup/pairing cannot enable it automatically.
+Focus a private window for several seconds. In the desktop Timeline,
+choose the Private browsing filter to see a generic private session with
+start/end times and approximate duration. No private address, domain,
+page title, or contents are saved, even with full paths/titles enabled.
+The PRIVATE TIME card totals these sessions. Their time also counts in
+active/app totals, not normal website totals. The extension options show
+Private-mode flag access as a read-only indicator; change permission in
+the browser's Details page.
+
+IF PAIRED BUT WEBSITES ARE EMPTY:
+The connection test checks pairing, not active website delivery.
+Visit a regular website for ten seconds, then check Activity delivery in
+the updated extension options. Reporting as must say Microsoft Edge for
+Edge. Its options page itself is excluded; inspect Last active website.
+Open the desktop's Browser status button (bottom row or tray menu) for
+live matching/delivery results. Copy diagnostics omits tokens, page
+titles, full URLs, and search text. This read-only view needs no password.
+Select Today, clear search, and choose Websites. Today now follows the
+local date after midnight; historical ranges stay unchanged.
+
+Closing the window keeps the app in your tray by default. Pause/resume,
+Quit, Settings, Browser setup, opening the data folder from the app,
+exporting results, clearing history, changing the password, and uninstalling
+require the management password each time. Viewing history does not.
+A pause ends when you resume or launch the app again. There is no built-in
+forgotten-password reset; keep your password somewhere safe.
+
+INSTALL LOCATION: %LOCALAPPDATA%\Programs\ActivityLedger\ActivityLedger.exe
+DATA LOCATION: %LOCALAPPDATA%\ActivityLedger
+
+To uninstall, quit from the tray with your password, then use Windows
+Installed apps. Uninstall also checks your password. It preserves your
+history, settings, and password for a later reinstall.
+
+Data stays local while optional Cloud sync is off. Local history is not encrypted. These password prompts protect
+in-app controls. Sufficient Windows permissions can still allow someone
+to end the process, disable startup, or change/delete files. This is not
+a Windows service and has no watchdog.
+
+The app records your foreground activity while running after sign-in.
+It cannot record while off/asleep, before sign-in, on another Windows
+account, or reconstruct earlier history. Background tabs are excluded.
+Private flags require the updated companion and browser permission;
+otherwise private activity may appear only as browser app usage. The
+desktop cannot reliably infer private mode alone, detect background
+private windows, or recover past private activity. Foreground sampling
+and browser heartbeats make boundaries approximate. See README.md.
+HTTP/HTTPS browser popups and app/PWA windows are supported when the
+browser exposes their active tab to the extension.
+
+The tracker itself is recorded as ActivityLedger.exe with the fixed title
+Activity Ledger. Password and other tracker dialog titles are never saved.
+
+Unsigned build with automated logic checks. Real Chrome for Testing 143
+(Chromium) on Linux passed pairing, bridge delivery, domain/source/time
+diagnostics, browser-label selection, HTTP popup capture, and internal-page
+clearing. This does not verify native Edge. Windows installation, interface,
+foreground collection, startup, password dialogs, and uninstall still need
+Windows runtime testing. No separate .NET install is required. Browser status
+helps identify any remaining Edge caption mismatch on your computer.
+
+OPTIONAL CLOUD DASHBOARD
+https://activity-ledger-cloud.realtrippydak.chatgpt.site
+Sign in with your ChatGPT account and choose Connect a laptop. Download its
+pairing file. In the Windows app open Cloud sync with your management password,
+import the file, choose how many days to upload, enable sync, and save.
+Sync is OFF by default. Enabled sync attempts updates about once per minute.
+The dashboard is read-only and shows the last successful sync. Your management
+password and private website details are never uploaded. Pairing credentials
+are encrypted for your Windows account. Keep the downloaded pairing file private
+and delete its copy after importing.
+Disabling sync or uninstalling leaves the last uploaded snapshot online. Revoke
+a laptop's upload key in the dashboard to stop future uploads; local recording
+continues. Use a separate pairing file for each Windows installation.
+Cloud viewing is covered by automated checks; Windows DPAPI, browser UI, and
+first real laptop-to-dashboard sync still require runtime verification.

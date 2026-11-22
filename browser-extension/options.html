@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pair Activity Ledger</title><link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <div class="eyebrow">ACTIVITY LEDGER / BROWSER COMPANION</div>
+    <h1>Your browsing timeline,<br>on your computer.</h1>
+    <p class="intro">Pair this browser with the desktop app to add the active website to your activity timeline. Keep Activity Ledger running while you browse.</p>
+    <form id="settings">
+      <label for="token">Pairing token</label>
+      <input id="token" type="password" autocomplete="off" spellcheck="false" required minlength="24" placeholder="Paste from desktop Browser setup → Copy connection token">
+      <p class="hint">This secret stays in this browser profile. It is never synced.</p>
+      <div class="row">
+        <div><label for="browser">Browser</label><select id="browser"><option value="chrome">Google Chrome</option><option value="msedge">Microsoft Edge</option></select></div>
+        <div><label for="port">Local port</label><input id="port" type="number" min="1024" max="65535" value="47831" required></div>
+      </div>
+      <button type="submit">Save and test connection</button>
+      <p id="status" role="status" aria-live="polite">Not paired yet</p>
+    </form>
+    <section class="diagnostics" aria-labelledby="diagnostics-title">
+      <h2 id="diagnostics-title">Activity delivery</h2>
+      <p>A successful pairing test verifies the connection. These details show whether active website reports are actually arriving.</p>
+      <dl>
+        <div><dt>Reporting as</dt><dd id="report-browser">Not reported yet</dd></div>
+        <div><dt>Latest report</dt><dd id="report-at">No activity report received</dd></div>
+        <div><dt>Report state</dt><dd id="report-state">Not reported yet</dd></div>
+        <div><dt>Private-mode flag access</dt><dd><label class="permission-state"><input id="incognito-allowed" type="checkbox" disabled><span id="incognito-access">Checking permission…</span></label></dd></div>
+        <div><dt>Last normal website</dt><dd id="active-domain">No normal website reported yet</dd></div>
+        <div><dt>Last normal website time</dt><dd id="active-at">Not reported yet</dd></div>
+      </dl>
+      <p id="delivery-error" role="status"></p>
+      <button id="refresh-status" type="button">Refresh activity status</button>
+      <p class="hint">Visit a regular website in a focused window for a few seconds, then return here. This settings page is excluded, so its current state is normally “Browser or extension page excluded.” If Edge is reporting as Chrome, select Microsoft Edge above and save.</p>
+      <p class="hint">To include a private-mode flag, open this extension's Details at edge://extensions or chrome://extensions and manually enable <strong>Allow in InPrivate</strong> or <strong>Allow in Incognito</strong>. The flag says only that private browsing is active. Private addresses, titles, and page contents are never collected. Until that permission is enabled, private-mode flags are unavailable.</p>
+    </section>
+    <aside><strong>What gets recorded</strong><p>The active HTTP(S) website in the focused regular browser window, website popup, or supported installed web app is reported. Private / InPrivate windows can report only a private-mode flag after you explicitly allow the extension in private mode; no private tab is queried. Background tabs, browser settings, and extension pages are excluded from website recording. The desktop app controls saved detail and exclusions.</p><p>No page contents, passwords, keystrokes, or screenshots are captured. Your desktop app stores the activity locally.</p></aside>
+    <footer>Companion 1.2.0 · Chrome / Edge 120 or later · Desktop app required</footer>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

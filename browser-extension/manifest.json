@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Activity Ledger — browser companion",
+  "description": "Record active website time locally. Optional private-mode flags contain no private addresses, titles, or page contents. Pairing is required.",
+  "version": "1.2.0",
+  "minimum_chrome_version": "120",
+  "permissions": ["tabs", "storage", "alarms"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Activity Ledger — pairing and status" },
+  "options_page": "options.html",
+  "incognito": "spanning"
+}

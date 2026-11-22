@@ -1,0 +1,24 @@
+ACTIVITY LEDGER 2.0.0
+
+Standalone installers for Intel/AMD x64 and Windows 11 ARM64 computers.
+No separate .NET runtime or external extension files required to install.
+Visible first-run guide for browser tracking and optional cloud pairing.
+Installer recognizes versioned names and browser duplicate-download suffixes.
+Each Windows account keeps separate history/password/browser pairing.
+Cloud sync remains optional and off on fresh installations; pair each computer
+with a separate laptop entry and upload key from the private dashboard.
+No management password, cloud upload credential, or activity history is included
+in the installer. Existing 1.x installations preserve their data and credentials.
+
+Features retained: password-protected pause/resume/quit/settings/uninstall;
+automatic recording at sign-in; local timeline/search/export; private-mode flags
+with explicit browser permission; and optional read-only cloud dashboard.
+
+Dashboard: https://activity-ledger-cloud.realtrippydak.chatgpt.site
+The first-run guide can be reopened from tray > Set up this computer.
+
+Validation: architecture builds, setup-entry checks, cloud sync/privacy/storage
+checks run in Linux. Fresh Windows x64/ARM64 setup, first-run dialogs, startup,
+DPAPI and real multi-machine cloud sync still require Windows runtime testing.
+The binaries are unsigned. OS-level process/file permissions can override the
+app's password controls. Recording cannot continue during sleep or shutdown.

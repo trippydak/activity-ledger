@@ -1,0 +1,22 @@
+bin/
+obj/
+obj-*/
+artifacts/
+*.user
+*.db*
+tests/**/bin/
+tests/**/obj/
+
+# Local data and credentials
+password.json
+settings.json
+cloud-settings.dat*
+*cloud-pairing*.json
+*.sqlite*
+*.dat
+.env*
+!*.example
+node_modules/
+CloudDashboard/dist/
+CloudDashboard/outputs/
+.sites-runtime/
